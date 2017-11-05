@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  items = ["Angular", "React", "Vue"];
+  newItem = "";
+  pushItem = function(){
+    if(this.newItem !=""){
+      this.items.push(this.newItem);
+      this.newItem = "";
+    }
+  }
+  
+  removeItem = function(index){
+    this.item.splice(index, 1);
+  }
 }
